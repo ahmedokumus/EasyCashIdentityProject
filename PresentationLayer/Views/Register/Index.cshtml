@@ -1,0 +1,260 @@
+﻿@using Microsoft.AspNetCore.Mvc.ModelBinding
+@model AppUserRegisterDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+    <title>Easy Cash Identity - Yeni Kullanıcı Kayıt</title>
+
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Meta-Tags -->
+
+    <link href="~/templates/login_form/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/templates/login_form/css/style.css" type="text/css" media="all">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+<!-- //Head -->
+<!-- Body -->
+<body>
+
+<h1>Easy Cash Kayıt</h1>
+
+<div class="w3layoutscontaineragileits">
+    <h2>Yeni Müşteri</h2>
+    <form action="#" method="post">
+        <input type="text" asp-for="Name" placeholder="Ad" required="">
+        <input type="text" asp-for="Surname" placeholder="Soyad" required="">
+        <input type="text" asp-for="Username" placeholder="Kullanıcı Adı" required="">
+        <input type="email" asp-for="Email" placeholder="Mail Adresi" required="">
+        <input type="password" asp-for="Password" placeholder="Şifre" required="">
+        <input type="password" asp-for="ConfirmPassword" placeholder="Şifre Tekrarı" required="">
+        <div asp-validation-summary="ModelOnly"></div>
+        <br/>
+        <ul class="agileinfotickwthree">
+            <li>
+                <input type="checkbox" id="brand1" value="">
+                    <label for="brand1"><span></span>Kullanım Şartlarını Okudum & Onaylıyorum</label>
+            </li>
+        </ul>
+        <div class="aitssendbuttonw3ls">
+            <input type="submit" value="Kayıt Ol">
+            <p> Bir Hesabınız Var mı? <span>→</span> <a href="/Login/Index/"> Giriş Yap</a></p>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+
+<!-- for register popup -->
+<div id="small-dialog1" class="mfp-hide">
+    <div class="contact-form1">
+        <div class="contact-w3-agileits">
+            <h3>Register Form</h3>
+            <form action="#" method="post">
+                <div class="form-sub-w3ls">
+                    <input placeholder="User Name" type="text" required="">
+                    <div class="icon-agile">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input placeholder="Email" class="mail" type="email" required="">
+                    <div class="icon-agile">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input placeholder="Password" type="password" required="">
+                    <div class="icon-agile">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input placeholder="Confirm Password" type="password" required="">
+                    <div class="icon-agile">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="login-check">
+                    <label class="checkbox"><input type="checkbox" name="checkbox" checked="">I Accept Terms & Conditions</label>
+                </div>
+                <div class="submit-w3l">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //for register popup -->
+
+<div class="w3footeragile">
+    <p> &copy; @DateTime.Now.Year Easy Cash Kayıt Formu. Tüm Hakları Saklıdır | Design by <a href="http://w3layouts.com" target="_blank">W3layouts</a></p>
+</div>
+
+
+<script type="text/javascript" src="~/templates/login_form/js/jquery-2.1.4.min.js"></script>
+
+<!-- pop-up-box-js-file -->
+<script src="~/templates/login_form/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<!--//pop-up-box-js-file -->
+<script>
+		$(document).ready(function() {
+		$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 200,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+		});
+	</script>
+
+</body>
+<!-- //Body -->
+
+</html>
+
+
+@*<!DOCTYPE html>
+<html>
+<head>
+    <title>Easy Cash Identity - Kullanıcı Kayıt</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Meta-Tags -->
+    <link href="~/templates/login_form/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Style -->
+    <link rel="stylesheet" href="~/templates/login_form/css/style.css" type="text/css" media="all">
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+<body>
+    <h1>EASY CASH</h1>
+    <div class="w3layoutscontaineragileits">
+        <h2>Giriş Yapın</h2>
+        <form action="#" method="post">
+            <input asp-for="Email" type="email" Name="Username" placeholder="E-posta" required="">
+            <input asp-for="Password" type="password" Name="Password" placeholder="Şifre" required="">
+            <ul class="agileinfotickwthree">
+                <li>
+                    <input type="checkbox" id="brand1" value="">
+                    <label for="brand1"><span></span>Beni Hatırla</label>
+                    <a href="#">Şifreni mi Unuttun ?</a>
+                </li>
+            </ul>
+            <div class="aitssendbuttonw3ls">
+                <input type="submit" value="GİRİŞ">
+                <p> Yeni hesap oluşturmak için <span>→</span> <a class="w3_play_icon1" href="#small-dialog1"> Buraya Tıklayın</a></p>
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+<!-- for register popup -->
+    <div id="small-dialog1" class="mfp-hide">
+        <div class="contact-form1">
+            <div class="contact-w3-agileits">
+                <h3>Kayıt Formu</h3>
+                <form action="#" method="post">
+                    <div class="form-sub-w3ls">
+                        <input asp-for="Name" placeholder="İsim" type="text" required="">
+                        <div class="icon-agile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3ls">
+                        <input asp-for="Surname" placeholder="Soyisim" type="text" required="">
+                        <div class="icon-agile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3ls">
+                        <input asp-for="Username" placeholder="Kullanıcı Adı" type="text" required="">
+                        <div class="icon-agile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3ls">
+                        <input asp-for="Email" placeholder="E-posta" class="mail" type="email" required="">
+                        <div class="icon-agile">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3ls">
+                        <input asp-for="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6,}$" placeholder="Şifre" type="password" required="">
+                        <div class="icon-agile">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-sub-w3ls">
+                        <input asp-for="ConfirmPassword" placeholder="Şifre Tekrar" type="password" required="">
+                        <div class="icon-agile">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Passwords must be at least 6 characters.</p>
+                        <p>Passwords must have at least one non alphanumeric character.</p>
+                        <p>Passwords must have at least one lowercase ('a'-'z').</p>
+                        <p>Passwords must have at least one uppercase ('A'-'Z').</p>
+                    </div>
+                    <br />
+                    <div class="login-check">
+                        <label class="checkbox"><input type="checkbox" name="checkbox" checked="">Kullanım Şartlarını Okudum & Onaylıyorum</label>
+                    </div>
+                    <div class="submit-w3l">
+                        <input type="submit" value="Kayıt Ol">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- //for register popup -->
+    <div class="w3footeragile">
+        <p> @DateTime.Now.Year Easy Cash Kayıt Formu. Tüm Hakları Saklıdır | Design by <a href="http://w3layouts.com" target="_blank">W3layouts</a></p>
+    </div>
+    <script type="text/javascript" src="~/templates/login_form/js/jquery-2.1.4.min.js"></script>
+    <!-- pop-up-box-js-file -->
+    <script src="~/templates/login_form/js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <!--//pop-up-box-js-file -->
+    <script>
+        $(document).ready(function () {
+            $('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 200,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+</body>
+</html>*@
